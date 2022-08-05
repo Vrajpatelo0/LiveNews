@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -36,3 +37,79 @@
     transform: rotate(360deg);
   }
 }
+.g-4{
+  background-color: #3e424a;
+}
+
+.card{
+  width: 440px;
+  height: 425px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  transition: all 0.6s ease;
+}
+
+.card:hover{
+  box-shadow: rgba(244, 242, 240, 0.414) -10px 10px, rgba(217, 216, 212, 0.19) -20px 20px ;
+  color: rgb(251, 251, 251);
+  background-color: rgba(28, 27, 27, 0.715);
+}
+
+.card .img{
+  height: 40%;
+  background: url("https://cdn.pixabay.com/photo/2015/07/28/20/55/tools-864983_1280.jpg");
+  background-size: cover;
+}
+
+.card .content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.card .content h3{
+  width: 200px;
+  font-weight: 300;
+  font-size: 30px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #FFAC1C;
+}
+
+.card .content p{
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.card .content a{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.card .content button{
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 100;
+  font-size: 20px;
+  color: #FFAC1C;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffac1c26;
+  transition: 0.2s ease-in-out;
+}
+
+.card .content button:hover{
+  background-color: #ffac1c3f;
+  cursor: pointer;
+}
+ 
