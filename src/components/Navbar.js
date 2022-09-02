@@ -7,7 +7,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Route,Routes, BrowserRouter } from 'react-router-dom';
 import Politics from './Politics';
-import Home from './Home';
 import Automobile from './Automobile';
 import Business from './Business';
 import Entertainment from './Entertainment';
@@ -19,6 +18,7 @@ import Startup from './Startup';
 import Technology from './Tecnology';
 import Unconventional from './Unconventional';
 import World from './World';
+import "./Navbar.css"
 
 
 export default function navbar() {
@@ -27,7 +27,8 @@ export default function navbar() {
     backgroundColor: "DodgerBlue",
     padding: "10px",
     fontFamily: "Arial",
-    maxHeight: '100px' 
+    maxHeight: '100px',
+    backgroundColor: 'black', 
   };
 
   return (
@@ -36,16 +37,16 @@ export default function navbar() {
       
     <BrowserRouter>
       
-       <Navbar bg="light" expand="lg">
+       <Navbar bg="light" expand="lg" className='fixed-top'>
         <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#" className='logo'>NEWS</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{mystyle}}
-            navbarScroll
-          >
+            navbarScroll>
+
             <Nav.Link href="/" >Home</Nav.Link>
             <Nav.Link href="/">Politics</Nav.Link>
             <NavDropdown title="More News" id="navbarScrollingDropdown">
@@ -80,9 +81,7 @@ export default function navbar() {
        </Container>
        </Navbar>
 
-       <Routes>
-          <Route path="/" element={<Home/>} />
-       </Routes>
+       
        <Routes>
           <Route path="/Politics" element={<Politics/>} />
        </Routes>
@@ -119,10 +118,6 @@ export default function navbar() {
        <Routes>
           <Route path="/World" element={<World/>} />
        </Routes>
-    
-    
-
-   
     </BrowserRouter> 
 
     

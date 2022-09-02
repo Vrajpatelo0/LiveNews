@@ -9,7 +9,7 @@ export default function Home() {
     fetch('https://inshorts.deta.dev/news?category')
     .then((response)=>response.json())
     .then((json)=>{
-      console.log(json);
+      
       setData(json.data);
     });
   };
@@ -23,8 +23,8 @@ export default function Home() {
   },[]);
   
   return (
-    <div>
-        <Container fluid>
+    <div >
+        <Container fluid className='maindiv'>
       <Row xs={1} md={3} className="g-4">
         {
           mydata.map(
